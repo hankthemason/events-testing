@@ -1,0 +1,55 @@
+@import url("https://use.typekit.net/qos4jus.css");
+@import "~styles/breakpoints";
+
+.eventContainer {
+  margin-top: 40px;
+  width: 100%;
+  padding: 0 10px;
+
+  @include minWidth(tablet) {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+.title {
+  font-size: 36px;
+}
+
+.dates {
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.tickets {
+  a {
+    font-family: adobe-handwriting-ernie, sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    color: blue;
+    &:visited {
+      color: blue;
+    }
+  }
+}
+
+.eventImage {
+  max-width: calc(100% - 20px);
+
+  @include minWidth(tablet) {
+    max-width: 100%;
+  }
+}
+
+.description {
+  text-align: left;
+  font-size: 20px;
+  width: calc(100% - 30px);
+
+  @include minWidth(tablet) {
+    width: 100%;
+  }
+}

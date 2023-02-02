@@ -1,0 +1,83 @@
+@import "~styles/colors";
+@import "~styles/breakpoints";
+
+.eventsList {
+  margin: -43% 10px 0px 10px;
+  list-style-type: none;
+  padding-left: 0;
+  @include minWidth(small-desktop) {
+    margin-top: 0px;
+  }
+}
+
+.eventsPageEventsList {
+  @include maxWidth(small-desktop) {
+    margin-top: 20px;
+  }
+}
+
+.eventContainer {
+  &:hover {
+    .eventImage {
+      display: block;
+    }
+  }
+}
+
+.eventRow {
+  margin-bottom: 50px;
+
+  a {
+    text-decoration: none;
+    color: $red-primary;
+    font-size: 30px;
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+
+  @include minWidth(small-desktop) {
+    margin-bottom: 30px;
+  }
+}
+
+.dates {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.eventImage {
+  display: none;
+  position: absolute;
+  z-index: -1000;
+}
+
+.showImage {
+  display: none;
+  @include minWidth(small-desktop) {
+    display: block;
+  }
+}
+
+.mobileImg {
+  max-width: 100%;
+
+  @include minWidth(tablet) {
+    max-width: 50%;
+    order: 2;
+  }
+
+  @include minWidth(small-desktop) {
+    display: none;
+  }
+}
+
+.rowContainer {
+  @include minWidth(tablet) {
+    display: flex;
+  }
+
+  @include minWidth(small-desktop) {
+    display: block;
+  }
+}

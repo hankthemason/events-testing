@@ -1,0 +1,7 @@
+@import "~styles/breakpoints";
+
+.spacer {
+  @include minWidth(small-desktop) {
+    height: 320px;
+  }
+}

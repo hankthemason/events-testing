@@ -1,0 +1,13 @@
+@import "~styles/breakpoints";
+
+.dropdownContainer {
+  margin-top: -50%;
+
+  @include minWidth(small-desktop) {
+    display: none;
+  }
+}
+
+.muiSelect {
+  height: 20px !important;
+}

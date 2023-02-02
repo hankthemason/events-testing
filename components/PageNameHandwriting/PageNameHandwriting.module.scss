@@ -1,0 +1,12 @@
+@import "~styles/breakpoints";
+
+.handwriting {
+  max-width: 100%;
+  @include minWidth(small-desktop) {
+    width: 100%;
+    position: absolute;
+    top: 51px;
+    left: -4px;
+    z-index: -100;
+  }
+}

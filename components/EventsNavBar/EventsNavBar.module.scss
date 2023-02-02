@@ -1,0 +1,48 @@
+@import "~styles/colors";
+@import "~styles/breakpoints";
+
+.filterContainer {
+  display: flex;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  margin-bottom: 40px;
+  padding: 10px 0px 10px 20px;
+  display: none;
+
+  a {
+    @extend .filterLabel;
+    text-decoration: none;
+    color: $red-primary;
+
+    &:visited {
+      color: $red-primary;
+    }
+  }
+
+  @include minWidth(small-desktop) {
+    display: flex;
+  }
+}
+
+.filterLabel {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: Helvetica, sans-serif;
+  margin-right: 40px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:first-of-type {
+    margin-right: auto;
+  }
+
+  &:last-of-type {
+    margin-left: auto;
+  }
+}
+
+.selected {
+  font-style: italic;
+}

@@ -1,0 +1,74 @@
+@import "~styles/colors";
+@import "~styles/breakpoints";
+
+.logo {
+  width: 75%;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+
+  .logoLink:hover {
+    opacity: 100%;
+  }
+
+  h1 {
+    margin: 0;
+  }
+  .horizontalMenu {
+    list-style-type: none;
+    display: none;
+    gap: 20px;
+    padding: 0;
+    font-size: 22px;
+    margin-left: auto;
+  }
+
+  @include minWidth(small-desktop) {
+    .horizontalMenu {
+      display: flex;
+    }
+  }
+
+  a:hover {
+    opacity: 0.75;
+  }
+}
+
+.title {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: $red-primary;
+  font-size: 72px;
+
+  a {
+    text-decoration: none;
+    color: $red-primary;
+  }
+  :visited {
+    color: $red-primary;
+  }
+
+  @include minWidth(small-desktop) {
+    font-size: 120px;
+    margin: 0;
+  }
+}
+
+.link {
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0 0.5rem;
+  a {
+    text-decoration: none;
+    color: $red-primary;
+  }
+  :visited {
+    color: $red-primary;
+  }
+}
+
+.currentPage {
+  font-style: italic;
+}

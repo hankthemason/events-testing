@@ -1,0 +1,36 @@
+@import url("https://use.typekit.net/qos4jus.css");
+@import "~styles/breakpoints";
+
+.title {
+  font-size: 36px;
+}
+
+.dates {
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.tickets {
+  a {
+    font-family: adobe-handwriting-ernie, sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    color: black;
+    &:visited {
+      color: black;
+    }
+  }
+}
+
+.eventImage {
+  max-width: 50%;
+  height: auto;
+
+  @include minWidth(tablet) {
+    float: right;
+    margin-left: 30px;
+  }
+}
